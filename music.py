@@ -80,13 +80,13 @@ class Music(commands.Cog):
         if self.is_playing:
             self.is_playing = False
             self.is_paused = True
-            await ctx.channel.send("Paused ⏸")
+            await ctx.channel.send("Paused")
             await ctx.voice_client.pause()
 
     @commands.command()
     async def resume(self, ctx):
         if self.is_paused:
-            await ctx.channel.send("Resumed ⏯")
+            await ctx.channel.send("Resumed")
             await ctx.voice_client.resume()
 
     @commands.command()
